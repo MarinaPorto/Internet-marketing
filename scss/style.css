@@ -237,6 +237,10 @@ body {
           transform: rotate(45deg);
 }
 
+.burger__active {
+  overflow: hidden;
+}
+
 .about {
   padding-bottom: 11%;
 }
@@ -444,6 +448,111 @@ body {
   padding: 0 10px;
 }
 
+.footer {
+  background-color: #333333;
+  padding-top: 100px;
+  color: #fff;
+}
+
+.footer__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__item:not(:last-child) {
+  margin-right: 108px;
+}
+
+.footer__title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  color: #ffffff;
+  opacity: 0.5;
+  margin-bottom: 24px;
+}
+
+.footer__menu-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 170%;
+}
+
+.footer__menu-link:hover {
+  color: #ff5900;
+}
+
+.footer__logo {
+  margin-bottom: 58px;
+}
+
+.footer .region-choice, .footer__registr {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 170%;
+  opacity: 0.5;
+}
+
+.footer .region-city {
+  text-decoration: underline;
+}
+
+.footer__region {
+  margin-bottom: 25px;
+}
+
+.footer__address {
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.footer__social {
+  margin-top: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .social-link:not(:last-child) {
+  margin-right: 20px;
+}
+
+.footer .social-link:hover {
+  scale: 1.1;
+}
+
+.footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 0;
+  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 120%;
+  color: #ffffff;
+  opacity: 0.3;
+}
+
+.footer .politics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .separate {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 @media screen and (max-width: 1300px) {
   .about__content {
     padding-top: 10%;
@@ -496,6 +605,9 @@ body {
     margin-right: 30px;
     margin-bottom: 30px;
   }
+  .footer__item:not(:last-child) {
+    margin-right: 70px;
+  }
 }
 
 @media screen and (max-width: 994px) {
@@ -507,6 +619,14 @@ body {
   }
   .about__content {
     padding-top: 5%;
+  }
+  .footer__item:not(:last-child) {
+    margin-right: 50px;
+    margin-bottom: 40px;
+  }
+  .footer__items {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -645,6 +765,9 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
+  .digital__title {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 734px) {
@@ -655,8 +778,34 @@ body {
     padding: 16px 20px;
   }
   .digital {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .footer__item:not(:last-child) {
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+  .footer__items {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .footer__item:not(:last-child) {
+    margin-right: 0px;
+    margin-bottom: 40px;
+  }
+  .footer__items {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 40px;
   }
 }
 
@@ -679,6 +828,22 @@ body {
   .about__img {
     display: block;
     margin-bottom: 16px;
+  }
+  .footer__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 40px;
+  }
+  .politics {
+    margin-top: 14px;
+  }
+  .footer__logo {
+    margin-bottom: 38px;
   }
 }
 
@@ -704,6 +869,25 @@ body {
   }
   .about__title {
     font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .footer {
+    padding-top: 60px;
+  }
+  .footer__item:not(:last-child) {
+    margin-right: 0px;
+    margin-bottom: 26px;
+  }
+  .footer__items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
