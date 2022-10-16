@@ -237,10 +237,6 @@ body {
           transform: rotate(45deg);
 }
 
-.burger__active {
-  overflow: hidden;
-}
-
 .about {
   padding-bottom: 11%;
 }
