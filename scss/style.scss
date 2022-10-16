@@ -87,7 +87,6 @@ body {
 .about {
   background-image: url(../img/top-bg.jpg);
   background-repeat: no-repeat;
-  height: 800px;
   background-size: 100% auto;
   background-position: top center;
 }
@@ -139,28 +138,6 @@ body {
     margin-right: 8px;
   }
 }
-
-// .header {
-//   height: 120px;
-//   padding-right: 15%;
-//   padding-left: 3%;
-//   display: flex;
-//   justify-content: space-between;
-// }
-
-// .logo {
-//   max-width: 30%;
-//   text-align: center;
-//   color: #474542;
-//   margin-top: auto;
-//   &__name {
-//     font-family: $font-antiqua;
-//     font-weight: 300;
-//     font-size: 40px;
-//     line-height: 52px;
-//     color: #5c5956;
-//   }
-// }
 
 .border {
   border-top: 1px solid rgba(51, 51, 51, 0.1);
@@ -241,6 +218,85 @@ body {
   transform: rotate(45deg);
 }
 
+/////about
+.about {
+  padding-bottom: 11%;
+
+  &__img {
+    display: none;
+  }
+
+  &__content {
+    padding-top: 15%;
+    max-width: 780px;
+    color: $white-color;
+    // background-color: aqua;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 68px;
+    line-height: 110%;
+    margin-bottom: 28px;
+  }
+  &__description {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    margin-bottom: 52px;
+  }
+  &__btns {
+    display: flex;
+  }
+  &__btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #ffffff;
+    backdrop-filter: blur(2.5px);
+    border-radius: 100px;
+    padding: 20px 40px;
+    transition: all 0.5s;
+  }
+
+  &__btn:hover {
+    background: $accent-color;
+    border: 1px solid $accent-color;
+    backdrop-filter: blur(2.5px);
+  }
+
+  &__btn:not(:last-child) {
+    margin-right: 32px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .about {
+    &__content {
+      padding-top: 10%;
+    }
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .about {
+    &__content {
+      padding-top: 10%;
+    }
+
+    &__title {
+      font-weight: 700;
+      font-size: 52px;
+      line-height: 110%;
+      margin-bottom: 28px;
+    }
+    &__description {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+      margin-bottom: 46px;
+    }
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .nav {
     font-size: 12px;
@@ -259,6 +315,12 @@ body {
       margin-right: 30px;
     }
   }
+
+  .about {
+    &__content {
+      padding-top: 9%;
+    }
+  }
 }
 @media screen and (max-width: 994px) {
   .nav {
@@ -268,16 +330,26 @@ body {
       margin-right: 26px;
     }
   }
+  .about {
+    &__content {
+      padding-top: 5%;
+    }
+  }
 }
 
 @media screen and (max-width: 966px) {
   .about {
     margin-top: 30px;
+
+    &__title {
+      font-size: 38px;
+    }
   }
 
   .container__nav {
     display: flex;
     justify-content: flex-end;
+    position: relative;
   }
 
   .menu__burger {
@@ -301,6 +373,9 @@ body {
 
   .header__menu.active {
     transform: translateY(0);
+    position: absolute;
+    top: 0;
+    z-index: 80;
   }
 
   .nav__items {
@@ -359,9 +434,52 @@ body {
   }
 }
 
+@media screen and (max-width: 734px) {
+  .about__description {
+    margin-bottom: 30px;
+  }
+  .about__btn {
+    padding: 16px 20px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .about {
+    background: none;
+    &__content {
+      color: $text-main;
+    }
+    &__btn {
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid $accent-color;
+      color: $accent-color;
+      text-align: center;
+    }
+    &__btn:hover {
+      color: $white-color;
+    }
+    &__img {
+      display: block;
+      margin-bottom: 16px;
+    }
+  }
+}
+
 @media screen and (max-width: 570px) {
   .logo-contacts__btn {
     margin-top: 16px;
+  }
+  .about__btns {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .about__btn:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+  .about__title {
+    font-size: 30px;
   }
 }
 
@@ -372,5 +490,10 @@ body {
 
   .logo-contacts__tel {
     margin-top: 16px;
+  }
+  .logo-contacts {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
